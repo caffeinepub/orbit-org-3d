@@ -1,0 +1,85 @@
+{
+  "kind": "build_request",
+  "title": "Black & White Theme with Extensive 3D Elements Throughout",
+  "projectName": "Orbit Org 3D",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "text": "Replace the entire color palette across all components, CSS variables, and Tailwind config with a strict black-and-white-only scheme. Remove all teal, amber, and any other accent colors. Use pure black (#000000) and pure white (#FFFFFF) as the primary colors, with mid-grays permitted only for depth/shadow. Update frontend/src/index.css, frontend/tailwind.config.js, and all component files to enforce this constraint consistently.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "it should only use the colors black and white"
+        ]
+      },
+      "acceptanceCriteria": [
+        "No teal, amber, blue, purple, or any chromatic color appears anywhere on the site",
+        "All CSS custom properties, Tailwind tokens, and inline styles use only black, white, and grayscale values",
+        "The hero 3D scene uses only black/white/gray materials and lighting",
+        "Interactive3DCards use only monochrome emissive materials",
+        "All text, borders, backgrounds, and highlights are strictly black, white, or grayscale"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Add prominent 3D visual elements to every section of the site beyond the hero — including About, Mission/Vision, Services, Team, and Contact. Each section must include at least one Three.js/React Three Fiber 3D element (e.g., floating geometric shapes, wireframe meshes, rotating icons, particle backgrounds, or 3D typography). These elements should be rendered in black and white and respond subtly to scroll or mouse interaction where appropriate.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "the entire website must have a lot of 3d elements"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About section includes a 3D decorative element (e.g., floating wireframe shapes or a particle cloud)",
+        "Mission/Vision section includes a 3D element (e.g., rotating geometric forms or a 3D divider)",
+        "Services section retains and enhances its Interactive3DCards with monochrome materials",
+        "Team section includes a 3D background or per-card 3D accent element",
+        "Contact section includes at least one 3D decorative element",
+        "All 3D elements use only black/white/gray color values",
+        "Page performance remains acceptable — 3D elements use instancing or low-poly geometry where needed"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Update the Navbar and Footer to match the strict black-and-white theme. The navbar should use a black background with white text and a white/gray scroll-indicator or border. Remove any colored hover effects and replace with white or gray-based highlights. The footer should follow the same monochrome treatment.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "the entire website must have a lot of 3d elements and it should only use the colors black and white"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navbar background is black or near-black with white links and logo text",
+        "Hover and active states on nav links use white/gray only",
+        "Footer uses monochrome styling with no colored social icons or accent links",
+        "Mobile hamburger menu follows the same black-and-white scheme"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/hooks/ or frontend/src/components/ui/",
+    "All color changes must be strictly black, white, and grayscale — no chromatic colors permitted anywhere",
+    "Backend (backend/main.mo) must not be modified",
+    "Do not remove any existing sections or structural layout from App.tsx"
+  ],
+  "nonGoals": [
+    "Adding new content sections beyond those already present",
+    "Changing the organisation name, tagline, or content data structure in orgContent.ts",
+    "Implementing dark/light mode toggle — the site is always black-and-white",
+    "Backend logic changes"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

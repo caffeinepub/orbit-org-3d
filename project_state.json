@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Interactive 3D website for an organisation, redesigned with extensive 3D elements throughout and a strict black-and-white color palette.",
+  "architectural_notes": [
+    "Color palette restricted to black and white only — no teal, amber, or other accent colors",
+    "All sections must feature prominent 3D elements (not limited to hero section)"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-visually-striking-interactive-3d-homepage-using-three-js-with-react-three-fiber-featuring-an-animated-3d-scene-as-the-hero-section-e-g-rotating-globe-floating-geometric-shapes-or-particle-field-that-responds-to-mouse-movement-and-scroll-position",
+      "title": "Create a visually striking interactive 3D homepage using Three.js with React Three Fiber, featuring an animated 3D scene as the hero section (e.g., rotating globe, floating geometric shapes, or particle field) that responds to mouse movement and scroll position.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-multi-section-single-page-layout-including-hero-3d-scene-about-mission-vision-services-or-programs-team-and-contact-sections-each-section-should-smoothly-scroll-into-view-with-entrance-animations",
+      "title": "Build a multi-section single-page layout including: Hero (3D scene), About, Mission/Vision, Services or Programs, Team, and Contact sections. Each section should smoothly scroll into view with entrance animations.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-sticky-navigation-bar-with-the-organisation-name-logo-on-the-left-and-anchor-links-to-each-section-on-the-right-include-a-mobile-friendly-hamburger-menu-for-smaller-screens",
+      "title": "Implement a sticky navigation bar with the organisation name/logo on the left and anchor links to each section on the right. Include a mobile-friendly hamburger menu for smaller screens.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-3d-interactive-element-within-the-services-or-about-section-such-as-clickable-3d-cards-or-floating-icons-that-expand-with-details-on-click-to-reinforce-the-interactive-3d-theme-beyond-just-the-hero",
+      "title": "Add a 3D interactive element within the Services or About section — such as clickable 3D cards or floating icons that expand with details on click — to reinforce the interactive 3D theme beyond just the hero.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-bold-dark-mode-first-visual-theme-with-deep-space-or-obsidian-tones-near-black-backgrounds-dark-slate-vivid-accent-colours-electric-teal-or-amber-modern-sans-serif-typography-and-generous-whitespace-enforce-this-design-language-consistently-across-all-sections",
+      "title": "Apply a bold, dark-mode-first visual theme with deep space or obsidian tones (near-black backgrounds, dark slate), vivid accent colours (electric teal or amber), modern sans-serif typography, and generous whitespace. Enforce this design language consistently across all sections.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-placeholder-organisation-details-name-mission-services-team-members-with-clearly-labelled-dummy-content-slots-so-real-content-can-be-swapped-in-easily-structure-the-data-as-constants-in-a-dedicated-content-file-e-g-frontend-src-data-orgcontent-ts",
+      "title": "Use placeholder organisation details (name, mission, services, team members) with clearly labelled dummy content slots so real content can be swapped in easily. Structure the data as constants in a dedicated content file (e.g., frontend/src/data/orgContent.ts).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-entire-color-palette-across-all-components-css-variables-and-tailwind-config-with-a-strict-black-and-white-only-scheme-remove-all-teal-amber-and-any-other-accent-colors-use-pure-black-000000-and-pure-white-ffffff-as-the-primary-colors-with-mid-grays-permitted-only-for-depth-shadow-update-frontend-src-index-css-frontend-tailwind-config-js-and-all-component-files-to-enforce-this-constraint-consistently",
+      "title": "Replace the entire color palette across all components, CSS variables, and Tailwind config with a strict black-and-white-only scheme. Remove all teal, amber, and any other accent colors. Use pure black (#000000) and pure white (#FFFFFF) as the primary colors, with mid-grays permitted only for depth/shadow. Update frontend/src/index.css, frontend/tailwind.config.js, and all component files to enforce this constraint consistently.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-prominent-3d-visual-elements-to-every-section-of-the-site-beyond-the-hero-including-about-mission-vision-services-team-and-contact-each-section-must-include-at-least-one-three-js-react-three-fiber-3d-element-e-g-floating-geometric-shapes-wireframe-meshes-rotating-icons-particle-backgrounds-or-3d-typography-these-elements-should-be-rendered-in-black-and-white-and-respond-subtly-to-scroll-or-mouse-interaction-where-appropriate",
+      "title": "Add prominent 3D visual elements to every section of the site beyond the hero — including About, Mission/Vision, Services, Team, and Contact. Each section must include at least one Three.js/React Three Fiber 3D element (e.g., floating geometric shapes, wireframe meshes, rotating icons, particle backgrounds, or 3D typography). These elements should be rendered in black and white and respond subtly to scroll or mouse interaction where appropriate.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-navbar-and-footer-to-match-the-strict-black-and-white-theme-the-navbar-should-use-a-black-background-with-white-text-and-a-white-gray-scroll-indicator-or-border-remove-any-colored-hover-effects-and-replace-with-white-or-gray-based-highlights-the-footer-should-follow-the-same-monochrome-treatment",
+      "title": "Update the Navbar and Footer to match the strict black-and-white theme. The navbar should use a black background with white text and a white/gray scroll-indicator or border. Remove any colored hover effects and replace with white or gray-based highlights. The footer should follow the same monochrome treatment.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Interactive 3D website for the organisation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Redesign entire website to use only black and white colors",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add extensive 3D elements throughout all sections of the website, not just the hero",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "3d",
+  "projectName": "Orbit Org 3D",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

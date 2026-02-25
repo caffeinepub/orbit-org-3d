@@ -1,0 +1,72 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-replace-the-entire-color-palette-across-all-components-css-variables-and-tailwind-config-with-a-strict-black-and-white-only-scheme-remove-all-teal-amber-and-any-other-accent-colors-use-pure-black-000000-and-pure-white-ffffff-as-the-primary-colors-with-mid-grays-permitted-only-for-depth-shadow-update-frontend-src-index-css-frontend-tailwind-config-js-and-all-component-files-to-enforce-this-constraint-consistently",
+      "featureTitle": "Replace the entire color palette across all components, CSS variables, and Tailwind config with a strict black-and-white-only scheme. Remove all teal, amber, and any other accent colors. Use pure black (#000000) and pure white (#FFFFFF) as the primary colors, with mid-grays permitted only for depth/shadow. Update frontend/src/index.css, frontend/tailwind.config.js, and all component files to enforce this constraint consistently.",
+      "files": [
+        "frontend/src/components/About.tsx",
+        "frontend/src/components/Contact.tsx",
+        "frontend/src/components/Hero3D.tsx",
+        "frontend/src/components/Interactive3DCards.tsx",
+        "frontend/src/components/MissionVision.tsx",
+        "frontend/src/components/Services.tsx",
+        "frontend/src/components/Team.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-prominent-3d-visual-elements-to-every-section-of-the-site-beyond-the-hero-including-about-mission-vision-services-team-and-contact-each-section-must-include-at-least-one-three-js-react-three-fiber-3d-element-e-g-floating-geometric-shapes-wireframe-meshes-rotating-icons-particle-backgrounds-or-3d-typography-these-elements-should-be-rendered-in-black-and-white-and-respond-subtly-to-scroll-or-mouse-interaction-where-appropriate",
+      "featureTitle": "Add prominent 3D visual elements to every section of the site beyond the hero — including About, Mission/Vision, Services, Team, and Contact. Each section must include at least one Three.js/React Three Fiber 3D element (e.g., floating geometric shapes, wireframe meshes, rotating icons, particle backgrounds, or 3D typography). These elements should be rendered in black and white and respond subtly to scroll or mouse interaction where appropriate.",
+      "files": [
+        "frontend/src/components/About.tsx",
+        "frontend/src/components/Contact.tsx",
+        "frontend/src/components/MissionVision.tsx",
+        "frontend/src/components/Services.tsx",
+        "frontend/src/components/Team.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-navbar-and-footer-to-match-the-strict-black-and-white-theme-the-navbar-should-use-a-black-background-with-white-text-and-a-white-gray-scroll-indicator-or-border-remove-any-colored-hover-effects-and-replace-with-white-or-gray-based-highlights-the-footer-should-follow-the-same-monochrome-treatment",
+      "featureTitle": "Update the Navbar and Footer to match the strict black-and-white theme. The navbar should use a black background with white text and a white/gray scroll-indicator or border. Remove any colored hover effects and replace with white or gray-based highlights. The footer should follow the same monochrome treatment.",
+      "files": [
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/Navbar.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

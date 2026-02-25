@@ -1,0 +1,127 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Black & White Theme with Extensive 3D Elements Throughout",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "summary": "Replace the entire color palette with a strict black-and-white-only scheme across all components, CSS variables, and Tailwind config",
+      "acceptanceCriteria": [
+        "No teal, amber, blue, purple, or any chromatic color appears anywhere on the site",
+        "All CSS custom properties, Tailwind tokens, and inline styles use only black, white, and grayscale values",
+        "The hero 3D scene uses only black/white/gray materials and lighting",
+        "Interactive3DCards use only monochrome emissive materials",
+        "All text, borders, backgrounds, and highlights are strictly black, white, or grayscale"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Replace all OKLCH CSS custom properties with black (#000000), white (#FFFFFF), and grayscale values only. Remove all teal, amber, and chromatic color definitions. Update background, foreground, card, accent, primary, secondary, muted, and destructive color tokens to use only pure black, pure white, and mid-gray shades. Ensure border, ring, and chart colors are also monochrome."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Remove all chromatic color definitions from the theme.extend.colors object. Replace teal, amber, hero, and surface color tokens with black, white, and grayscale values only. Ensure all Tailwind color utilities reference only monochrome CSS variables."
+        },
+        {
+          "path": "frontend/src/components/Hero3D.tsx",
+          "operation": "modify",
+          "description": "Update all Three.js materials, lighting, and color values to use only black (#000000), white (#FFFFFF), and grayscale. Replace any chromatic emissive colors, sphere materials, particle colors, and ring colors with monochrome equivalents. Remove references to orgContent color properties or replace them with black/white constants."
+        },
+        {
+          "path": "frontend/src/components/Interactive3DCards.tsx",
+          "operation": "modify",
+          "description": "Replace all emissive material colors with monochrome values (black, white, or gray). Update hover and selection color effects to use only grayscale tones. Ensure all Three.js color properties use #000000, #FFFFFF, or hex gray values."
+        },
+        {
+          "path": "frontend/src/components/About.tsx",
+          "operation": "modify",
+          "description": "Remove any inline color styles or className tokens that reference chromatic colors. Replace gradient, border, and text accent classes with monochrome equivalents. Ensure all background, text, and border colors are strictly black, white, or grayscale."
+        },
+        {
+          "path": "frontend/src/components/MissionVision.tsx",
+          "operation": "modify",
+          "description": "Update card styling to use only black, white, and grayscale colors. Remove any gradient or accent color classes. Ensure text, borders, and background colors are monochrome."
+        },
+        {
+          "path": "frontend/src/components/Services.tsx",
+          "operation": "modify",
+          "description": "Remove chromatic color references from service card styling. Update hover effects, borders, and text colors to use only black, white, and grayscale. Ensure the detail panel and grid cards follow the monochrome theme."
+        },
+        {
+          "path": "frontend/src/components/Team.tsx",
+          "operation": "modify",
+          "description": "Replace avatar background colors, border accents, and hover effects with black, white, and grayscale values only. Remove any chromatic color classes from team member cards."
+        },
+        {
+          "path": "frontend/src/components/Contact.tsx",
+          "operation": "modify",
+          "description": "Update contact info cards, social media link colors, form styling, and success state colors to use only monochrome values. Remove any teal, amber, or chromatic accent colors from icons and borders."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Add prominent 3D visual elements to every section beyond the hero using Three.js/React Three Fiber with black-and-white materials",
+      "acceptanceCriteria": [
+        "About section includes a 3D decorative element (e.g., floating wireframe shapes or a particle cloud)",
+        "Mission/Vision section includes a 3D element (e.g., rotating geometric forms or a 3D divider)",
+        "Services section retains and enhances its Interactive3DCards with monochrome materials",
+        "Team section includes a 3D background or per-card 3D accent element",
+        "Contact section includes at least one 3D decorative element",
+        "All 3D elements use only black/white/gray color values",
+        "Page performance remains acceptable — 3D elements use instancing or low-poly geometry where needed"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/About.tsx",
+          "operation": "modify",
+          "description": "Integrate a React Three Fiber Canvas containing a 3D decorative element such as floating wireframe geometric shapes or a particle cloud. Use low-poly geometry and only black, white, and gray materials. Position the Canvas absolutely or within a dedicated container so it does not disrupt the existing layout. Optionally add subtle scroll-based or mouse-based interaction."
+        },
+        {
+          "path": "frontend/src/components/MissionVision.tsx",
+          "operation": "modify",
+          "description": "Add a React Three Fiber Canvas with a 3D element such as rotating geometric forms (e.g., icosahedrons or cubes) or a 3D divider mesh. Use only monochrome materials and wireframe or low-poly meshes. Position the Canvas behind or alongside the mission/vision cards without disrupting the existing text content."
+        },
+        {
+          "path": "frontend/src/components/Services.tsx",
+          "operation": "modify",
+          "description": "Verify that the existing Interactive3DCards component is rendered and enhance it if needed by confirming monochrome materials are applied (handled in REQ-7). Optionally add an additional background 3D element such as a wireframe grid or floating shapes in a secondary Canvas layer."
+        },
+        {
+          "path": "frontend/src/components/Team.tsx",
+          "operation": "modify",
+          "description": "Add a React Three Fiber Canvas behind the team member cards displaying a 3D background element such as a particle field, wireframe grid, or floating geometric shapes. Use only black, white, and gray materials. Ensure the 3D layer does not obscure the team cards and uses low-poly geometry for performance."
+        },
+        {
+          "path": "frontend/src/components/Contact.tsx",
+          "operation": "modify",
+          "description": "Add a React Three Fiber Canvas containing at least one 3D decorative element such as a rotating wireframe object or a floating geometric shape. Use only monochrome materials. Position the Canvas to complement the contact form and info cards without blocking interactive elements."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Update the Navbar and Footer to match the strict black-and-white theme with monochrome backgrounds, text, and hover effects",
+      "acceptanceCriteria": [
+        "Navbar background is black or near-black with white links and logo text",
+        "Hover and active states on nav links use white/gray only",
+        "Footer uses monochrome styling with no colored social icons or accent links",
+        "Mobile hamburger menu follows the same black-and-white scheme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "modify",
+          "description": "Replace the navbar background with a black or near-black color. Update all navigation link text to white. Replace any chromatic hover effects (teal, amber, etc.) with white or gray-based highlights. Ensure the scroll indicator, borders, and mobile hamburger menu all use only black, white, and grayscale colors. Update the mobile menu background and text colors to match the monochrome theme."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Update the footer background to black or dark gray. Set all text, links, and social icons to white or light gray. Remove any chromatic accent colors from social icon hover states and replace with white or gray effects. Ensure the caffeine.ai attribution link also uses monochrome styling."
+        }
+      ]
+    }
+  ]
+}
